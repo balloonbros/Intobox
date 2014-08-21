@@ -1,0 +1,13 @@
+{
+  "referral_link": "https://db.tt/aaaaaaaa",
+  "display_name": "Mark Zuckerberg",
+  "uid": 22222222,
+  "country": "US",
+  "quota_info": {
+    "datastores": 0,
+    "shared": 2375025082,
+    "quota": 4160749568,
+    "normal": 4677215635
+  },
+  "email": "mark@facebook.com"
+}

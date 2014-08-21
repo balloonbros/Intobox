@@ -1,0 +1,38 @@
+@import 'mixins/all.css.scss';
+
+.primary-button {
+  background-color: $highlightColor;
+  color: #fff;
+}
+
+.secondary-button {
+  background-color: #333844;
+  color: #fff;
+}
+
+.invalid-button {
+  background-color: #fff;
+  color: #aaa;
+}
+
+.authenticate-button {
+  @include box(283px, 55px);
+  margin:40px auto;
+}
+
+.facebook-authenticate-button {
+  @include authenticate-button(#3c5b9f);
+}
+
+.dropbox-authenticate-button {
+  @include authenticate-button(#158adf);
+}
+
+.delete-button {
+  @include authenticate-button(#68598c);
+}
+
+.cancel-button {
+  @include authenticate-button(#fff);
+  a { color: #444; }
+}

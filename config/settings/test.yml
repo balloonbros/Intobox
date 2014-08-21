@@ -1,0 +1,5 @@
+notify:
+  from: notice@intobox.in
+  to:
+    error: test@intobox.in
+    withdrawal: test@intobox.in

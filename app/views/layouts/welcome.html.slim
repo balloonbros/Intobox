@@ -1,0 +1,29 @@
+doctype 5
+html
+  head
+    meta charset="utf-8"
+    title = t('layouts.title')
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = yield :css
+    = yield :js
+    = csrf_meta_tags
+    = favicon_link_tag
+    meta name="description" content="#{t('layouts.description')}"
+    meta name="keywords" content="ファイル送信,大容量,シンプル,ダウンロード不要,Facebook,Dropbox"
+    meta name="apple-mobile-web-app-title" content="#{Settings.service.name}"
+    meta property="og:title" content="#{t('layouts.title')}"
+    meta property="og:type" content="article"
+    meta property="og:description" content="#{t('layouts.description')}"
+    meta property="og:url" content="#{Settings.service.full_uri}/"
+    meta property="og:image" content="http://intobox.in/ogp.png"
+    meta property="og:site_name"content="#{Settings.service.name}"
+    meta property="og:locale" content="ja_JP"
+    meta property="fb:app_id" content="#{Rails.application.secrets.oauth.facebook.app}"
+body
+  = render partial: 'layouts/google_analytics'
+  .container
+    .width-full-container-inner
+      = yield
+    = render partial: 'layouts/intobox_footer'
+  = render partial: 'layouts/facebook_like_box_base'

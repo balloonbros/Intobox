@@ -1,0 +1,47 @@
+#intobox-tutorial.tutorial-box-container.flyaway
+  #prev-tutorial.tutorial-step-arrow = image_tag 'tutorial/arrow_left.png', width: 86, alt: '戻る', class: 'hidden'
+  .tutorial-box
+    .js-tutorial
+      div
+        .tutorial-box-header
+          | #{Settings.service.name}について
+          = image_tag 'tutorial/tutorial_close.png', width: 66, alt: '閉じる', class: 'tutorial-box-closer js-dialog-closer', 'data-dialog-closer' => 'intobox-tutorial'
+        .tutorial-sebastian = image_tag 'index/sebastian.png', width: 242, alt: 'セバスチャン'
+        .about-intobox
+          h2 「送る」をもっとシンプルに。
+          p 送る相手を選ぶだけ。受け取るのだってラクチン。#{Settings.service.name}は、Facebookのアカウントを利用し、友逹に対して簡単にファイルを送ることができるサービスです。これでもう、相手のメールアドレスを知らなくても大丈夫。1つのファイルにつき150MBまで送信可能です。
+          p 送信されたファイルは受け取る側のDropboxへ直接お届けいたします。そのため、ダウンロードする手間さえもかかりません。送信完了と同時に、お届け先のフォルダの中にファイルが保存されています。
+          p 送るも受け取るも気軽で簡単。それが#{Settings.service.name}です。
+      div
+        .tutorial-box-header
+          | チュートリアル１：ファイルを送りたい相手を#{Settings.service.name}へ招待しましょう。
+          = image_tag 'tutorial/tutorial_close.png', width: 66, alt: '閉じる', class: 'tutorial-box-closer js-dialog-closer', 'data-dialog-closer' => 'intobox-tutorial'
+        ul.tutorial-steps
+          li
+            = image_tag 'tutorial/tutorial_a1.jpg', width: 246, alt: "#{Settings.service.name}へ招待する"
+            p 送りたい相手がまだ#{Settings.service.name}ユーザーではない場合、相手のステータスは「招待する」になっています。
+          li
+            = image_tag 'tutorial/tutorial_a2.jpg', width: 246, alt: 'メッセージを送信'
+            p #{Settings.service.name}ユーザーではない友逹を選択すると、Facebookメッセージで紹介することができます。
+          li
+            = image_tag 'tutorial/tutorial_a3.jpg', width: 246, alt: 'ファイルを送る'
+            p 相手が#{Settings.service.name}ユーザーになると、ステータスが「ファイルを送る」に変わります。
+      div
+        .tutorial-box-header
+          | チュートリアル２：ファイルを送りたい相手を選び、ファイル送信を行いましょう。
+          = image_tag 'tutorial/tutorial_close.png', width: 66, alt: '閉じる', class: 'tutorial-box-closer js-dialog-closer', 'data-dialog-closer' => 'intobox-tutorial'
+        ul.tutorial-steps
+          li
+            = image_tag 'tutorial/tutorial_b1.jpg', width: 246, alt: 'ファイルを送る'
+            p ステータスが「ファイルを送る」になっている友逹を選ぶと、ファイル送信画面が開きます。
+          li
+            = image_tag 'tutorial/tutorial_b2.jpg', width: 246, alt: 'ファイル送信中'
+            p 送りたいファイルを選択し、送信画面の「送信」を押すとファイルの送信が行われます。
+          li
+            = image_tag 'tutorial/tutorial_b3.jpg', width: 246, alt: '送受信歴'
+            p これで送信完了です。送信結果は送信履歴で確認することができます。
+    #bx-pager.tutorial-pager.page3
+      a data-slide-index="0" href=""
+      a data-slide-index="1" href=""
+      a data-slide-index="2" href=""
+  #next-tutorial.tutorial-step-arrow = image_tag 'tutorial/arrow_right.png', width: 86, alt: '進む'

@@ -1,0 +1,11 @@
+header.header
+  .inner-header
+    h1 = link_to(image_tag('logo_inner.png', width: 67, alt: Settings.service.name), home_path)
+    - if current_user
+      .header-account
+        = image_tag "https://graph.facebook.com/#{current_user.facebook_authenticate.facebook_id}/picture", width: 20, alt: 'サインイン中のアカウント', class: 'facebook-account-icon'
+        span#popover-menu-icon.menu-icon.js-popover-menu-icon
+          = image_tag 'tabs.png', width: '32', alt: 'tabs', id: 'popover-menu-icon-image'
+          = image_tag 'tabs_hover.png', width: '32', alt: 'tabs', class: 'hidden', id: 'popover-menu-icon-hover-image'
+      = dialog partial: 'layouts/account_setting'
+= render partial: 'layouts/popover_menu'

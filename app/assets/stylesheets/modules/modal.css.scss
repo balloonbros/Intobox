@@ -1,0 +1,15 @@
+.modal-dialog-box {
+  display: none;
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.7);
+}
+
+.dialog-closer {
+  width: 100%;
+  text-align: right;
+  position: absolute;
+
+  img {
+    cursor: pointer;
+    @include position-right(-12px, -12px);
+  }
+}

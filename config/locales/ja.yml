@@ -1,0 +1,47 @@
+ja:
+  layouts:
+    title: Intobox - 受け取る手間なしの大容量ファイル送信サービス
+    description: 送る相手を選ぶだけ。受け取るのだってラクチン。Intoboxは、Facebookのアカウントを利用し、友逹のDropboxに対して簡単にファイルを送ることができるサービスです。
+  dropbox:
+    facebook_message: '%{sender} さんから %{receiver} さんの https://www.dropbox.com/home/%{app_folder_name}/Intobox 宛に "%{file_name}" が届いています。'
+  views:
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
+      truncate: "..."
+  errors: &errors
+    format: ! '%{message}'
+    messages:
+      accepted: '%{attribute}を受諾してください。'
+      blank: '%{attribute}を入力してください。'
+      confirmation: '入力された%{attribute}が一致しません。'
+      empty: '%{attribute}を入力してください。'
+      equal_to: '%{attribute}は%{count}にしてください。'
+      even: '%{attribute}は偶数にしてください。'
+      exclusion: '%{attribute}は予約されています。'
+      greater_than: '%{attribute}は%{count}より大きい値にしてください。'
+      greater_than_or_equal_to: '%{attribute}は%{count}以上の値にしてください。'
+      inclusion: '%{attribute}は一覧にありません。'
+      invalid: '%{attribute}が正しく入力されていません。'
+      less_than: '%{attribute}は%{count}より小さい値にしてください。'
+      less_than_or_equal_to: '%{attribute}は%{count}以下の値にしてください。'
+      not_a_number: '%{attribute}は数値で入力してください。'
+      not_an_integer: '%{attribute}は整数で入力してください。'
+      odd: '%{attribute}は奇数にしてください。'
+      record_invalid: '%{attribute}バリデーションに失敗しました。 %{errors}'
+      taken: '%{attribute}はすでに存在します。'
+      too_long: '%{attribute}は%{count}文字以内で入力してください。'
+      too_short: '%{attribute}は%{count}文字以上で入力してください。'
+      wrong_length: '%{attribute}は%{count}文字で入力してください。'
+      range: '%{attribute}は%{count1}文字以上%{count2}文字以下で入力してください。'
+      rome: '%{attribute}はローマ字で入力してください。'
+      kana: '%{attribute}はカナで入力してください。'
+      numeric: '%{attribute}は数値を入力してください。'
+  activemodel:
+    errors:
+      <<: *errors
+  activerecord:
+    errors:
+      <<: *errors

@@ -1,0 +1,55 @@
+= css 'pages/welcome/index'
+= js 'welcome/index'
+
+.center
+  = image_tag 'index/sebastian.png', width: 242, alt: 'Sebastian', class: 'sebastian'
+  h1 = image_tag 'index/logo.png', width: 408, alt: 'Intobox'
+  h2.copy 「送る」をもっとシンプルに
+  - if @mobile_request
+    .mobile
+      = image_tag 'index/attention.png', width: 28, alt: 'スマートフォンからのアクセスについて'
+      p 申し訳ありませんが、スマートフォンからのご利用にはまだ対応しておりません。PCからご利用ください。
+  - else
+    .authenticate-button.login-area.facebook-authenticate-button
+      a href="/auth/facebook" Facebookでサインイン
+      = image_tag 'index/sup.png', width: 28, alt: 'Facebookでサインインについて', class: 'sup-icon', id: 'about-facebook-signin-icon'
+  #about-facebook-signin.about-facebook-signin.hidden
+    | サインインにのみ利用されます。Facebookのタイムラインに通知されることはありません。
+    .desc-balloon-area = image_tag 'popover_arrow.png', width: 12, alt: 'Facebookでサインインについて'
+  .intobox-screen-area
+    #prev-screen.step-arrow.prev-step = image_tag 'tutorial/arrow_left.png', width: 86, alt: '戻る'
+    #intobox-screens
+      .screen = image_tag 'index/screen_1.jpg', width: 960, alt: 'スクリーンショット'
+      .screen = image_tag 'index/screen_2.jpg', width: 960, alt: 'スクリーンショット'
+      .screen = image_tag 'index/screen_3.jpg', width: 960, alt: 'スクリーンショット'
+    #next-screen.step-arrow.next-step = image_tag 'tutorial/arrow_right.png', width: 86, alt: '進む'
+  .clearfix
+.social
+  ul
+    li
+      .fb-like data-href="https://intobox.in/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"
+    li
+      #twitter
+        a.twitter-share-button href="https://twitter.com/share" data-url="https://intobox.in/" data-text="「送る」をもっとシンプルに。Intobox" data-via="IntoboxTeam" data-lang="ja" ツイート
+        script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    li
+      #twitter-into
+        a.twitter-follow-button href="https://twitter.com/IntoboxTeam" data-show-count="false" data-lang="ja" @IntoboxTeamさんをフォロー
+        script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+.about
+  .about-inner
+    h2 送る相手を選ぶだけ。受け取るのだってラクチン。
+    p Intoboxは、Facebookのアカウントを利用し、友だちに対して簡単にファイルを送ることができるサービスです。これでもう、相手のメールアドレスを知らなくても大丈夫。そして、送信されたファイルは受け取る側のDropboxへ直接お届けいたします。そのため、ダウンロードする手間さえもかかりません。送るも受け取るも気軽で簡単。これからのファイル送信は、すべてIntoboxにおまかせください。
+.point
+  ul
+    li
+      h3 まずは登録、あとはラクラク
+      p 必要なのは、送る人、送られる人のFacebookとDropboxのアカウント。さて、登録の方はお済みでしょうか。たったこれだけで、送る準備は整いました。
+    li
+      h3 シンプルな操作
+      p 送る操作もとってもシンプル。まずはIntoboxにサインインしてください。そのあと、相手のFacebookアカウントを選んで、ファイルを送信。これでおしまい、ほんとに簡単。
+    li
+      h3 大容量ファイルを送信可能
+      p １つのファイルにつき150MBまで送信可能です。そのうえIntoboxなら、いくら大きなファイルでも受け取るときにダウンロードの手間がかかりません。送信完了と同時に、お届け先のフォルダの中にファイルが保存されています。これがIntobox最大の特徴です。
+.fb-like-box-wrapper
+  .fb-like-box data-href="http://www.facebook.com/intobox" data-width="980" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"

@@ -1,0 +1,6 @@
+- active_tab = :all_friends if local_assigns[:active_tab].blank?
+
+ul
+  li#all-friends class="js-action#{" active" if active_tab == :all_friends}" = link_to 'すべての友逹', "#{home_path}#"
+  li#sendable-friends class="js-action#{" active" if active_tab == :sendable_friends}" = link_to 'ファイルを送れる友達', "#{home_path}#sendable"
+  li class="#{"active" if active_tab == :transfer_histories}" = link_to '送受信履歴', receive_transfer_histories_path

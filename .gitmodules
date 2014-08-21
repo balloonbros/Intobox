@@ -1,0 +1,3 @@
+[submodule "private"]
+	path = private
+	url = git@bitbucket.org:tkengo/intobox-private.git

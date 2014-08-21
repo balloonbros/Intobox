@@ -1,0 +1,32 @@
+@import 'mixins/all.css.scss';
+
+input, textarea {
+  border-width: 0;
+}
+
+textarea {
+  @include default-color;
+  background-color: #e0e0e0;
+  font-size: 14px;
+  padding: 8px;
+}
+
+select, .customSelect {
+  padding: 8px 5px 8px 12px;
+  appearance:none;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -o-appearance:none;
+}
+
+.customSelect {
+  background: asset-url('pulldown.png') 95% 50% no-repeat;
+  background-color: #e0e0e0;
+  height: 30px;
+  line-height: 30px;
+  color: #9fa0a4;
+
+  &.valuable {
+    @include default-color;
+  }
+}

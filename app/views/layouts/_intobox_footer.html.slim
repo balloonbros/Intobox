@@ -1,0 +1,5 @@
+footer.footer
+  | &copy; #{Settings.service.name}
+  a href="mailto:#{Settings.service.mail}" #{Settings.service.mail}
+  = link_to '規約', terms_of_service_path, target: '_blank'
+  = link_to 'プライバシー', privacy_policy_path, target: '_blank'

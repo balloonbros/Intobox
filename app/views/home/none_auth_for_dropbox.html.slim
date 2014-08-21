@@ -1,0 +1,12 @@
+= css 'pages/home'
+
+.center.dropbox-authenticate-area
+  = image_tag 'dropbox_authentication.png', width: 310, alt: 'Dropbox認証'
+  p.description.dropbox-authenticate-text #{Settings.service.name}でファイルの送受信を行うために、まずはDropbox認証を行いましょう。
+  p ※認証されたアカウントは、自動生成されるIntoboxディレクトリ以下にファイルを受信するためのみに利用されます。
+  p.dropbox-authenticate-text-sup
+    | 詳しくは
+    = link_to 'プライバシーポリシー', privacy_policy_path, target: '_blank'
+    | をご覧ください。
+  .dropbox-authenticate-button.authenticate-button
+    a href="/auth/dropbox_oauth2" Dropbox認証を行う

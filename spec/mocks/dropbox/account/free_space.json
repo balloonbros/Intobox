@@ -1,0 +1,13 @@
+{
+  "referral_link": "https://db.tt/aaaaaaaa",
+  "display_name": "Sebastian",
+  "uid": 11111111,
+  "country": "JP",
+  "quota_info": {
+    "datastores": 0,
+    "shared": 2375025082,
+    "quota": 4160749568,
+    "normal": 677215635
+  },
+  "email": "sebastian@intobox.in"
+}

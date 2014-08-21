@@ -1,0 +1,20 @@
+= css 'pages/transfer_histories'
+
+#intobox-menu.menu-list = render partial: 'application/menu_list', locals: { active_tab: :transfer_histories }
+hr
+.menu-list-lower = render partial: 'history_menu_list', locals: { active_tab: :send }
+- if @histories.any?
+  table.transfer-history cellspacing="0" cellpadding="0" border="0"
+    - @histories.each do |history|
+      tr class="#{history_record_class(history)}"
+        td.facebook-friend-icon = image_tag "https://graph.facebook.com/#{history.receive_user.facebook_authenticate.facebook_id}/picture?width=50&height=50", width: 50, alt: history.receive_user.facebook_authenticate.facebook_name
+        td.facebook-friend-name
+          div = history.receive_user.facebook_authenticate.facebook_name
+        td.file-icon = image_tag 'file.png', width: 13, alt: 'ファイル'
+        td.transfer-file-name
+          div = history_result_for_sender(history) + history.filename
+        td = history.file_size.to_size
+        td.transfer-timestamp = history.created_at.to_s(:long_ja)
+  = paginate @histories
+- else
+  = render partial: 'none_history'

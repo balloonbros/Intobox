@@ -1,0 +1,36 @@
+#first-tutorial.tutorial-box-container.flyaway
+  #prev-first-tutorial.tutorial-step-arrow = image_tag 'tutorial/arrow_left.png', width: 86, alt: '戻る', class: 'hidden'
+  .tutorial-box
+    .js-tutorial
+      div
+        .tutorial-box-header
+          | ようこそ！まずは、ファイルを送りたい相手を#{Settings.service.name}へ招待しましょう。
+          = image_tag 'tutorial/tutorial_close.png', width: 66, alt: '閉じる', class: 'tutorial-box-closer js-dialog-closer', 'data-dialog-closer' => 'first-tutorial'
+        ul.tutorial-steps
+          li
+            = image_tag 'tutorial/tutorial_a1.jpg', width: 246, alt: "#{Settings.service.name}へ招待する"
+            p 送りたい相手がまだ#{Settings.service.name}ユーザーではない場合、相手のステータスは「招待する」になっています。
+          li
+            = image_tag 'tutorial/tutorial_a2.jpg', width: 246, alt: 'メッセージを送信'
+            p #{Settings.service.name}ユーザーではない友逹を選択すると、Facebookメッセージで紹介することができます。
+          li
+            = image_tag 'tutorial/tutorial_a3.jpg', width: 246, alt: 'ファイルを送る'
+            p 相手が#{Settings.service.name}ユーザーになると、ステータスが「ファイルを送る」に変わります。
+      div
+        .tutorial-box-header
+          | ファイルを送りたい相手を選び、ファイル送信を行いましょう。
+          = image_tag 'tutorial/tutorial_close.png', width: 66, alt: '閉じる', class: 'tutorial-box-closer js-dialog-closer', 'data-dialog-closer' => 'first-tutorial'
+        ul.tutorial-steps
+          li
+            = image_tag 'tutorial/tutorial_b1.jpg', width: 246, alt: 'ファイルを送る'
+            p ステータスが「ファイルを送る」になっている友逹を選ぶと、ファイル送信画面が開きます。
+          li
+            = image_tag 'tutorial/tutorial_b2.jpg', width: 246, alt: 'ファイル送信中'
+            p 送りたいファイルを選択し、送信画面の「送信」を押すとファイルの送信が行われます。
+          li
+            = image_tag 'tutorial/tutorial_b3.jpg', width: 246, alt: '送受信歴'
+            p これで送信完了です。送信結果は送信履歴で確認することができます。
+    #bx-first-pager.tutorial-pager.page2
+      a data-slide-index="0" href=""
+      a data-slide-index="1" href=""
+  #next-first-tutorial.tutorial-step-arrow = image_tag 'tutorial/arrow_right.png', width: 86, alt: '進む'

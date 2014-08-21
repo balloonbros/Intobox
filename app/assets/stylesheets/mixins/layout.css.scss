@@ -1,0 +1,28 @@
+@mixin position($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin position-right($top, $right) {
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+
+@mixin horizontal-list {
+  list-style: none;
+
+  li {
+    list-style: none;
+    float: left;
+  }
+}
+
+@mixin none-style-list {
+  list-style: none;
+
+  li {
+    list-style: none;
+  }
+}

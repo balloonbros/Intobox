@@ -1,0 +1,298 @@
+/*
+ *= require_self
+ */
+
+@import 'mixins/all.css.scss';
+
+.search-area {
+  position: relative;
+
+  .search {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 300px;
+    height: 20px;
+    line-height: 20px;
+    padding: 10px;
+    font-size: 13px;
+    border: none;
+    background-color: #e0e0e0;
+  }
+
+  input {
+    @include placeholder-color(#999a9e);
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+}
+
+.friend-list {
+  margin-top: 25px;
+
+  ul {
+    @include horizontal-list;
+
+    li {
+      $boxWidth: 320px;
+      $boxHeight: 70px;
+      $iconSize: 90px;
+
+      text-decoration: none;
+      @include box($boxWidth, $boxHeight);
+      background-color: #fff;
+      border-bottom: solid 1px #e9e9e9;
+      cursor: pointer;
+      transition: color .1s linear, background-color .1s linear;
+
+      a {
+        height: $boxHeight;
+        display: block;
+        text-decoration: none;
+      }
+
+      .facebook-friend {
+        margin-left: $iconSize;
+
+        .facebook-friend-inner {
+          height: $boxHeight;
+          display: table-cell;
+          vertical-align: middle;
+        }
+
+        .facebook-friend-name {
+          font-weight: bold;
+          width: $boxWidth - $iconSize - 20;
+          text-overflow: ellipsis;
+          display: block;
+          overflow: hidden;
+          max-height: 52px;
+          white-space: nowrap;
+        }
+
+        .facebook-picture {
+          margin-left: -$iconSize;
+          height: $boxHeight;
+        }
+      }
+
+      &.list-primary, &.list-primary a { @include primary-color; }
+      &.list-warning, &.list-warning a { @include warning-color; }
+
+      &.list-primary:hover {
+        &, .operation-link {
+          color: #fff;
+        }
+        background-color: $primaryColor;
+      }
+      &.list-warning:hover {
+        &, .operation-link, a {
+          color: #fff;
+        }
+        background-color: $warningColor;
+      }
+
+      .operation-link {
+        @include secondary-color;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.send-file-dialog {
+  $dialogWidth: 600px;
+  $dialogHeight: 468px;
+  $headerHeight: 100px;
+  $footerHeight: 60px;
+
+  @include box($dialogWidth, $dialogHeight);
+  background: #fff;
+
+  .send-file-dialog-header {
+    border-bottom: solid 1px #ddd;
+    height: $headerHeight;
+
+    .receiver-area {
+      text-align: center;
+      height: $headerHeight;
+      line-height: $headerHeight;
+      font-size: 15px;
+    }
+  }
+
+  .send-file-dialog-content {
+    $contentHeight: $dialogHeight - ($headerHeight + $footerHeight);
+    $sendFileNameHeight: 80px;
+
+    @include box($dialogWidth, $contentHeight);
+    border-bottom: solid 1px #ddd;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+
+    .drop-area {
+      @include box($dialogWidth - 24, $contentHeight - 24);
+      border: dashed 2px #e7e7e7;
+      position: relative;
+      top: 10px;
+      left: 10px;
+      transition: border-color .1s linear;
+
+      &.drag-over {
+        border-color: $highlightColor !important;
+      }
+
+      .drop-area-content {
+        margin: auto;
+        height: 110px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        img {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .progress-bar {
+      @include box(400px, $sendFileNameHeight);
+      top: 0;
+      left: 0;
+      position: absolute;
+      background-color: #b9d0d7;
+      width: 1px;
+      z-index: 1;
+    }
+
+    .progress-percentage {
+      height: $contentHeight;
+      right: 20px;
+      top: 26px;
+      position: absolute;
+      font-size: 18px;
+      z-index: 6;
+    }
+
+    img.finish {
+      position: absolute;
+      z-index: 6;
+      right: 20px;
+      top: 28px;
+    }
+
+    .send-file-name {
+      padding: 0 20px;
+      width: $dialogWidth - 40px;
+      height: $sendFileNameHeight;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: $sendFileNameHeight;
+      position: relative;
+      z-index: 3;
+
+      &.left {
+        text-align: left;
+        width: 500px;
+      }
+
+      &.send-error {
+        background-color: #e86f66;
+        color: #fff;
+      }
+    }
+
+    .content-description {
+      border-top: solid 1px #ddd;
+      height: $contentHeight - $sendFileNameHeight - 33px;
+      line-height: 33px;
+      padding-top: 18px;
+
+      .facebook-message {
+        @include box($dialogWidth - 50, 94px);
+        margin: 15px;
+        background-color: #fff;
+        border: solid 1px #8dd4e2;
+        box-shadow: 0 0 2px $highlightColor;
+
+        &.disabled {
+          border: solid 1px #d8d7d9 !important;
+          box-shadow: 0 0 0 #fff !important;
+        }
+      }
+    }
+  }
+
+  .send-file-dialog-footer {
+    height: $footerHeight;
+
+    .footer-button {
+      font-size: 16px;
+      width: 300px;
+      height: 60px;
+      line-height: 60px;
+      cursor: pointer;
+      position: relative;
+
+      &.invalid-button {
+        cursor: default !important;
+      }
+
+      .upload-file {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 100px;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+#after-send {
+  line-height: 34px;
+  margin-top: 60px;
+}
+
+.sent-facebook-message-dialog {
+  background-color: #fff;
+
+  .sent-facebook-message-dialog-text {
+    padding: 50px 80px;
+  }
+}
+
+#receiver-name {
+  font-weight:bold;
+  font-size:17px;
+}
+
+.dropbox-authenticate-area {
+  margin-top: 100px;
+  color: #a3a3a3;
+
+  .dropbox-authenticate-text {
+    margin: 100px 0 10px 0;
+  }
+  .dropbox-authenticate-text-sup {
+    margin: 0 0 30px 0;
+  }
+}
+
+.none-facebook-friend {
+  margin: 200px 0;
+}
+
+.none-send-friend {
+  margin: 200px 0;
+}

@@ -1,0 +1,37 @@
+.delete-container-inner {
+  width: 800px;
+  margin: 0 auto;
+
+  .delete-title {
+    margin-top: 80px;
+    font-size: 20px;
+  }
+
+  .delete-description {
+    margin: 20px 0 40px 0;
+  }
+
+  .delete-reason-area {
+    width: 720px;
+    margin: 0 auto;
+  }
+
+  .button-area {
+    margin-top: 40px;
+    height: 100px;
+
+    div {
+      margin: 0 20px;
+    }
+  }
+
+  select.delete-reason {
+    width: 400px;
+  }
+
+  textarea.delete-reason {
+    margin-top: 20px;
+    width: 700px;
+    height: 300px;
+  }
+}

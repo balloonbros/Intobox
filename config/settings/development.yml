@@ -1,0 +1,17 @@
+service:
+  host_name: intobox.dev
+facebook:
+  invitation:
+    redirect_uri: https://intobox.dev/home
+oauth:
+  facebook:
+    redirect_uri: https://intobox.dev/auth/facebook/callback
+  dropbox:
+    redirect_uri: https://intobox.dev/auth/dropbox_oauth2/callback
+notify:
+  from: notice@intobox.in
+  to:
+    error: test@intobox.in
+    withdrawal: test@intobox.in
+growth:
+  service_name: web_app_dev

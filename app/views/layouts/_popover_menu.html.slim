@@ -1,0 +1,16 @@
+#popover-menu.popover-menu.hidden.js-popover-menu
+  = image_tag 'popover_arrow.png', width: 12, class: 'arrow-icon'
+  .menu-box
+    ul
+      li
+        a#about-intobox href="#" data-modal-dialog="intobox-tutorial"
+          .menu-text #{Settings.service.name}について
+          = image_tag 'tab_about.png', class: 'menu-icon'
+      li
+        a#account-setting href="#" data-modal-dialog="account-setting-dialog" data-modal-dialog-closer="account-setting-dialog-closer"
+          .menu-text アカウント設定
+          = image_tag 'tab_setting.png', class: 'menu-icon'
+      li
+        a href="#{signout_path}"
+          .menu-text サインアウト
+          = image_tag 'tab_signout.png', class: 'menu-icon'

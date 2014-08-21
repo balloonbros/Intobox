@@ -1,0 +1,5 @@
+@mixin box($width, $height, $display: blcok) {
+  width: $width;
+  height: $height;
+  display: $display;
+}
