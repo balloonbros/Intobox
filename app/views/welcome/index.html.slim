@@ -1,20 +1,20 @@
 = css 'pages/welcome/index'
 = js 'welcome/index'
 
-.center
+header
   h1 Intobox
-  h2.copy 「送る」をもっとシンプルに
-  - if @mobile_request
-    .mobile
-      = image_tag 'index/attention.png', width: 28, alt: 'スマートフォンからのアクセスについて'
-      p 申し訳ありませんが、スマートフォンからのご利用にはまだ対応しておりません。PCからご利用ください。
-  - else
-    .authenticate-button.login-area.facebook-authenticate-button
-      a href="/auth/facebook" Facebookでサインイン
-      = image_tag 'index/sup.png', width: 28, alt: 'Facebookでサインインについて', class: 'sup-icon', id: 'about-facebook-signin-icon'
-  #about-facebook-signin.about-facebook-signin.hidden
-    | サインインにのみ利用されます。Facebookのタイムラインに通知されることはありません。
-    .desc-balloon-area = image_tag 'popover_arrow.png', width: 12, alt: 'Facebookでサインインについて'
+h2.copy 「送る」をもっとシンプルに
+- if @mobile_request
+  .mobile
+    = image_tag 'index/attention.png', width: 28, alt: 'スマートフォンからのアクセスについて'
+    p 申し訳ありませんが、スマートフォンからのご利用にはまだ対応しておりません。PCからご利用ください。
+- else
+  .authenticate-button.login-area.facebook-authenticate-button
+    a href="/auth/facebook" Facebookでサインイン
+    = image_tag 'index/sup.png', width: 28, alt: 'Facebookでサインインについて', class: 'sup-icon', id: 'about-facebook-signin-icon'
+#about-facebook-signin.about-facebook-signin.hidden
+  | サインインにのみ利用されます。Facebookのタイムラインに通知されることはありません。
+  .desc-balloon-area = image_tag 'popover_arrow.png', width: 12, alt: 'Facebookでサインインについて'
 
 = image_tag 'index/screen_1.jpg', width: 960, alt: 'スクリーンショット'
 = image_tag 'index/screen_2.jpg', width: 960, alt: 'スクリーンショット'
