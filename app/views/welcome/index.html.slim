@@ -15,40 +15,7 @@
   #about-facebook-signin.about-facebook-signin.hidden
     | サインインにのみ利用されます。Facebookのタイムラインに通知されることはありません。
     .desc-balloon-area = image_tag 'popover_arrow.png', width: 12, alt: 'Facebookでサインインについて'
-  .intobox-screen-area
-    #prev-screen.step-arrow.prev-step = image_tag 'tutorial/arrow_left.png', width: 86, alt: '戻る'
-    #intobox-screens
-      .screen = image_tag 'index/screen_1.jpg', width: 960, alt: 'スクリーンショット'
-      .screen = image_tag 'index/screen_2.jpg', width: 960, alt: 'スクリーンショット'
-      .screen = image_tag 'index/screen_3.jpg', width: 960, alt: 'スクリーンショット'
-    #next-screen.step-arrow.next-step = image_tag 'tutorial/arrow_right.png', width: 86, alt: '進む'
-  .clearfix
-.social
-  ul
-    li
-      .fb-like data-href="https://intobox.in/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"
-    li
-      #twitter
-        a.twitter-share-button href="https://twitter.com/share" data-url="https://intobox.in/" data-text="「送る」をもっとシンプルに。Intobox" data-via="IntoboxTeam" data-lang="ja" ツイート
-        script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-    li
-      #twitter-into
-        a.twitter-follow-button href="https://twitter.com/IntoboxTeam" data-show-count="false" data-lang="ja" @IntoboxTeamさんをフォロー
-        script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-.about
-  .about-inner
-    h2
-    p
-.point
-  ul
-    li
-      h3
-      p
-    li
-      h3
-      p
-    li
-      h3
-      p
-.fb-like-box-wrapper
-  .fb-like-box
+
+= image_tag 'index/screen_1.jpg', width: 960, alt: 'スクリーンショット'
+= image_tag 'index/screen_2.jpg', width: 960, alt: 'スクリーンショット'
+= image_tag 'index/screen_3.jpg', width: 960, alt: 'スクリーンショット'
