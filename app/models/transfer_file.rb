@@ -18,7 +18,6 @@ class TransferFile
 
       if start_transfer
         history.complete_sending!
-        send_facebook_message if send_facebook_message?
       else
         history.send_error!(transfer_error)
       end
@@ -31,15 +30,6 @@ class TransferFile
 
   def transfer_strategy
     TransferStrategy::Dropbox
-  end
-
-  def send_facebook_message
-    client = FacebookChat::Client.new(sender.facebook_authenticate.access_token)
-    client.send(receiver.facebook_authenticate.facebook_id, facebook_message)
-  end
-
-  def send_facebook_message?
-    send_message == '1' && facebook_message.present?
   end
 
   def sender
