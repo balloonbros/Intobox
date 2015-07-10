@@ -18,7 +18,6 @@ class TransferFile
 
       if start_transfer
         history.complete_sending!
-        send_facebook_message if send_facebook_message?
       else
         history.send_error!(transfer_error)
       end
