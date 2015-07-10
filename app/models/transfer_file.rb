@@ -32,15 +32,6 @@ class TransferFile
     TransferStrategy::Dropbox
   end
 
-  def send_facebook_message
-    client = FacebookChat::Client.new(sender.facebook_authenticate.access_token)
-    client.send(receiver.facebook_authenticate.facebook_id, facebook_message)
-  end
-
-  def send_facebook_message?
-    send_message == '1' && facebook_message.present?
-  end
-
   def sender
     @sender ||= User.where(id: sender_id).first
   end
