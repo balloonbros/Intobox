@@ -1,6 +1,6 @@
 set :application, 'Intobox'
 set :stages, %w(production staging)
-set :repo_url, 'git@bitbucket.org:keita_kawamoto/new-intobox.git'
+set :repo_url, 'git@github.com:balloonbros/Intobox.git'
 set :user, 'intobox'
 set :linked_dirs, %w(log)
 
