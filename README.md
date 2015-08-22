@@ -1,1 +1,3 @@
-# Welcome to the Intobox
+# Intobox
+
+Transfer files to the friend's Dropbox.
