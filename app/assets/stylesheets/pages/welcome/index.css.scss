@@ -106,30 +106,6 @@ h2.copy {
   box-shadow: 0 0 40px rgba(38,25,69,.19);
 }
 
-.social {
-  height: 70px;
-  background-color: #fff;
-  margin-top: -3px;
-  border-bottom: solid 1px #f0eef3;
-  position: relative;
-  z-index: 3;
-
-  ul {
-    @include horizontal-list;
-    width: 430px;
-    height: 70px;
-    margin: 0 auto;
-
-    li {
-      position: relative;
-      top: 50%;
-      width: 130px;
-      height: 16px;
-      margin-top: -9px;
-    }
-  }
-}
-
 .about {
   background-color: #fff;
   position: relative;
@@ -197,17 +173,5 @@ h2.copy {
 
   p {
     color: #acb1c6;
-  }
-}
-
-.fb-like-box-wrapper {
-  width: 100%;
-  background-color: #fff;
-
-  .fb-like-box {
-    width: 980px;
-    margin: 0 auto;
-    padding: 50px 0;
-    display: block !important;
   }
 }

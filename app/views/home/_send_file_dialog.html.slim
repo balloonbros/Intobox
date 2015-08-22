@@ -27,10 +27,6 @@
               span#app-folder-name &nbsp;
               | /#{Settings.send_directory}
             | &nbsp;フォルダに送信されます。
-            br
-            = check_box_tag :send_message, value: 1
-            = label_tag :send_message, 'ファイル送信が完了したらFacebookメッセージを送って知らせる'
-            = text_area_tag :facebook_message, '', id: 'facebook-message', class: 'facebook-message'
           span#after-send.hidden
             | ファイルの送信が完了しました。
             br
