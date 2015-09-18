@@ -1,0 +1,2 @@
+RewriteCond %{HTTPS} on
+RewriteRule ^(.*)$ http://intobox.in/$1 [R=301,L]
