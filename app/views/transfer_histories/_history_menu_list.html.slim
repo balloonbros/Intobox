@@ -1,5 +1,0 @@
-- active_tab = :receive if local_assigns[:active_tab].blank?
-
-ul
-  li class="#{ "active" if active_tab == :receive}" = link_to '受信履歴', receive_transfer_histories_path
-  li class="#{ "active" if active_tab == :send}" = link_to '送信履歴', send_transfer_histories_path
