@@ -6,8 +6,8 @@ html, body, header, footer, h1, p {
 
 body {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  color: #FFF;
-  background-color: #5E3780;
+  color: #fff;
+  background-color: #5e3780;
   padding-top: 100px;
 }
 
@@ -16,17 +16,17 @@ h1 {
 }
 
 h1 img {
-  box-shadow: 0px 8px 51px 4px rgba(0, 5, 66, 0.1);
+  box-shadow: 0 28px 36px -7px rgba(0, 5, 66, 0.15)
   border-radius: 30px;
 }
 
 a {
-  color: #FFF;
-  transition-duration: 0.5s;
+  color: #fff;
+  transition-duration: .5s;
 }
 
 a:hover {
-  opacity: 0.6;
+  opacity: .6;
 }
 
 .message {
